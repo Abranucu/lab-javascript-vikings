@@ -32,9 +32,9 @@ class Viking extends Soldier {
   }
   receiveDamage(dmg) {
     this.health -= dmg;
-    if (this.health !== 0) {
+    if (this.health > 0) {
       return `${this.name} has received ${dmg} points of damage`;
-    } else if (this.health === 0) {
+    } else if (this.health <= 0) {
       return `${this.name} has died in act of combat`;
     }
   }
@@ -50,9 +50,9 @@ class Saxon extends Soldier {
 
   receiveDamage(dmg) {
     this.health -= dmg;
-    if (this.health !== 0) {
+    if (this.health > 0) {
       return `A Saxon has received ${dmg} points of damage`;
-    } else if (this.health === 0) {
+    } else if (this.health <= 0) {
       return "A Saxon has died in combat";
     }
   }
